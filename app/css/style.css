@@ -1,0 +1,106 @@
+.toDoList {
+  width: 800px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 14px 2px rgba(0, 0, 0, 0.15);
+}
+
+.toDoList ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Style the list items */
+.toDoList ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.toDoList ul li:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.toDoList ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+.toDoList ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+.toDoList ul li.done {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+.toDoList ul li.done::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 15px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the header */
+.toDoList .header {
+  background-color: var(--primary-color);
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Clear floats after the header */
+.toDoList .header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+.toDoList input {
+  border: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.toDoList .btn-add {
+  padding: 11px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 0;
+}
+
+.toDoList .btn-add:hover {
+  background-color: #bbb;
+}
